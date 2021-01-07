@@ -36,9 +36,15 @@ public class Order implements Serializable{
 	joinColumns = @JoinColumn(name = "order_id"),
 	inverseJoinColumns = @JoinColumn(name = "product_id"))
 	
-private Set<Product> produto = new HashSet<>();
+private Set<Product> products = new HashSet<>();
 public Order() {
 	}
+public Set<Product> getProduto() {
+	return products;
+}
+public void setProduto(Set<Product> produto) {
+	this.products = produto;
+}
 public Order(Long id, String address, Double latitude, Double longitude, Instant moment, OrderStatus status) {
 	super();
 	this.id = id;
@@ -84,6 +90,7 @@ public OrderStatus getStatus() {
 public void setStatus(OrderStatus status) {
 	Status = status;
 }
+
 @Override
 public int hashCode() {
 	final int prime = 31;
