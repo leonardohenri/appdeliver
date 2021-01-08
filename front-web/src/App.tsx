@@ -1,11 +1,12 @@
 import React from 'react';
 import './App.css';
-import Counter from './Counter'
+import NavBAr from './NavBar';
+
 
 function App() {
   return (
     <div>
-  <Counter/>.
+  <NavBAr />
     </div>
   );
 }
